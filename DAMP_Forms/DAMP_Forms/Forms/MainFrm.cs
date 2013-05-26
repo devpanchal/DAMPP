@@ -15,5 +15,10 @@ namespace DAMP_Forms.Forms
         {
             InitializeComponent();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,3 +7,4 @@ D:\Projects\DAMPP\DAMP_Forms\DAMP_Forms\obj\x86\Debug\GenerateResource.read.1.tl
 D:\Projects\DAMPP\DAMP_Forms\DAMP_Forms\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\Projects\DAMPP\DAMP_Forms\DAMP_Forms\obj\x86\Debug\DAMP_Forms.exe
 D:\Projects\DAMPP\DAMP_Forms\DAMP_Forms\obj\x86\Debug\DAMP_Forms.pdb
+D:\Projects\DAMPP\DAMP_Forms\DAMP_Forms\obj\x86\Debug\DAMP_Forms.Forms.MainFrm.resources
