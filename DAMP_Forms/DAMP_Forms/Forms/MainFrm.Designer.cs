@@ -30,9 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.accountMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transportMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.challanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +38,19 @@
             this.utilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.accountMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transportMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -71,27 +79,6 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(70, 25);
             this.toolStripMenuItem1.Text = "Master";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // accountMasterToolStripMenuItem
-            // 
-            this.accountMasterToolStripMenuItem.Image = global::DAMP_Forms.Properties.Resources.Account_Icon;
-            this.accountMasterToolStripMenuItem.Name = "accountMasterToolStripMenuItem";
-            this.accountMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.accountMasterToolStripMenuItem.Text = "Account Master";
-            // 
-            // transportMasterToolStripMenuItem
-            // 
-            this.transportMasterToolStripMenuItem.Image = global::DAMP_Forms.Properties.Resources.Transport_Icon1;
-            this.transportMasterToolStripMenuItem.Name = "transportMasterToolStripMenuItem";
-            this.transportMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.transportMasterToolStripMenuItem.Text = "Transport Master";
-            // 
-            // itemMasterToolStripMenuItem
-            // 
-            this.itemMasterToolStripMenuItem.Image = global::DAMP_Forms.Properties.Resources.Item_Icon;
-            this.itemMasterToolStripMenuItem.Name = "itemMasterToolStripMenuItem";
-            this.itemMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
-            this.itemMasterToolStripMenuItem.Text = "Item Master";
             // 
             // transactionToolStripMenuItem
             // 
@@ -143,10 +130,11 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
@@ -159,12 +147,81 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 678);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1256, 61);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(950, 61);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(950, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(304, 59);
+            this.panel3.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 30.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(67, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(394, 55);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "DAMP Softwares Ltd";
+            // 
+            // accountMasterToolStripMenuItem
+            // 
+            this.accountMasterToolStripMenuItem.Image = global::DAMP_Forms.Properties.Resources.Account_Icon;
+            this.accountMasterToolStripMenuItem.Name = "accountMasterToolStripMenuItem";
+            this.accountMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.accountMasterToolStripMenuItem.Text = "Account Master";
+            // 
+            // transportMasterToolStripMenuItem
+            // 
+            this.transportMasterToolStripMenuItem.Image = global::DAMP_Forms.Properties.Resources.Transport_Icon1;
+            this.transportMasterToolStripMenuItem.Name = "transportMasterToolStripMenuItem";
+            this.transportMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.transportMasterToolStripMenuItem.Text = "Transport Master";
+            // 
+            // itemMasterToolStripMenuItem
+            // 
+            this.itemMasterToolStripMenuItem.Image = global::DAMP_Forms.Properties.Resources.Item_Icon;
+            this.itemMasterToolStripMenuItem.Name = "itemMasterToolStripMenuItem";
+            this.itemMasterToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.itemMasterToolStripMenuItem.Text = "Item Master";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DAMP_Forms.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 61);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 682);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MainMenuStrip = this.menuStrip1;
@@ -175,6 +232,10 @@
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,6 +255,11 @@
         private System.Windows.Forms.ToolStripMenuItem utilityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backUpToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
 
 
     }

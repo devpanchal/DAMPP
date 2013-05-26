@@ -74,6 +74,13 @@ namespace DAMP_Forms.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Transport_Icon {
             get {
                 object obj = ResourceManager.GetObject("Transport_Icon", resourceCulture);

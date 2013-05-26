@@ -18,7 +18,7 @@ namespace DAMP_Forms.Data
             {
                 DataTable dttemp = new DataTable();
                 SqlDataAdapter SqlDtAdapter = new SqlDataAdapter();
-                SqlConnection SqlConn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=DAMP_db;Integrated Security=True;Pooling=False");
+                SqlConnection SqlConn = new SqlConnection(@"Data Source=(local);Initial Catalog=DAMP_db;Integrated Security=True;Pooling=False");
 
                 if (SqlConn.State == ConnectionState.Closed)
                 {
