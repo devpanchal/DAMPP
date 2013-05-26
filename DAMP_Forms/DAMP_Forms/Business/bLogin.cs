@@ -38,6 +38,55 @@ namespace DAMP_Forms.Business
             }
         }
 
+        private string _name;
+        public string name
+        {
+            get {return this._name;}
+            set {this._name = value;}
+        }
+
+        private DateTime _birthday;
+        public DateTime birthday
+        {
+            get { return _birthday; }
+            set { _birthday = value; }
+        }
+
+        private string _email;
+        public string email
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+
+        private string _gender;
+        public string gender
+        {
+            get { return _gender; }
+            set { _gender = value; }
+        }
+
+        private Int64 _contact_no;
+        public Int64 contact_no
+        {
+            get { return _contact_no; }
+            set { _contact_no = value; }
+        }
+
+        private DateTime _creation_date;
+        public DateTime creation_date
+        {
+            get { return _creation_date; }
+            set { _creation_date = value; }
+        }
+
+        private DateTime _updation_date;
+        public DateTime updation_date
+        {
+            get { return _updation_date; }
+            set { _updation_date = value; }
+        }
+
         private DataTable _dtTemp;
         public DataTable dtTemp
         {
