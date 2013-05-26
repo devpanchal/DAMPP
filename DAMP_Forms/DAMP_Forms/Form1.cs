@@ -8,11 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DAMP_Forms.Forms;
+using DAMP_Forms.Business;
 
 namespace DAMP_Forms
 {
     public partial class Form1 : Form
     {
+        bLogin objbLogin = new bLogin();
+
         public Form1()
         {
             InitializeComponent();
@@ -20,15 +23,17 @@ namespace DAMP_Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //SqlConnection SqlConn = new SqlConnection(@"Data Source=SAIRAM-PC\SQLEXPRESS;Initial Catalog=DAMP;Integrated Security=True;Pooling=False");
-            //SqlConn.Open();
-
-            //SqlConn.Close();
-
-            MainFrm frm1 = new MainFrm();
-            this.Hide();
-            frm1.Show();
-            
+            SetData();
+            if (objbLogin.LoginAuthentication(txtPassword.Text.Trim()))
+            {
+                MainFrm frm1 = new MainFrm();
+                this.Hide();
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login Fail !!!");
+            }
         }
 
         
@@ -93,5 +98,19 @@ namespace DAMP_Forms
         //    byte[] decrypted = ProtectedData.Unprotect(data, null, Scope);
         //    return Encoding.Unicode.GetString(decrypted);
         //}
+
+        private void SetData()
+        {
+            try
+            {
+                objbLogin.userid = txtUserID.Text.Trim();
+                objbLogin.password = txtPassword.Text.Trim();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DAMP_Forms.Interface;
 using DAMP_Forms.Data;
+using System.Data;
 
 namespace DAMP_Forms.Business
 {
@@ -37,6 +38,19 @@ namespace DAMP_Forms.Business
             }
         }
 
+        private DataTable _dtTemp;
+        public DataTable dtTemp
+        {
+            get
+            {
+                return this._dtTemp;
+            }
+            set
+            {
+                this._dtTemp = value;
+            }
+        }
+
         #endregion
 
         #region "Function"
@@ -47,8 +61,15 @@ namespace DAMP_Forms.Business
             try
             {
                 objdLogin = new dLogin();
-                objdLogin.GetData();
-
+                if (objdLogin.GetData(this))
+                {
+                    FillProperties();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -58,7 +79,6 @@ namespace DAMP_Forms.Business
             {
                 objdLogin = null;
             }
-            return true;
         }
 
         public bool SaveData()
@@ -78,7 +98,11 @@ namespace DAMP_Forms.Business
         {
             try
             {
-
+                if (dtTemp != null && dtTemp.Rows.Count > 0)
+                {
+                    this.userid = dtTemp.Rows[0]["userid"].ToString();
+                    this.password = dtTemp.Rows[0]["password"].ToString();
+                }
             }
             catch (Exception ex)
             {
@@ -86,8 +110,6 @@ namespace DAMP_Forms.Business
             }
             return true;
         }
-
-
 
         public bool FillDataTable()
         {
@@ -102,11 +124,38 @@ namespace DAMP_Forms.Business
             return true;
         }
 
-
-
-
-
-
+        public bool LoginAuthentication(string TypPassword)
+        {
+            dLogin objdLogin;
+            try
+            {
+                objdLogin = new dLogin();
+                if (GetData())
+                {
+                    if (this.password.Equals(TypPassword))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                objdLogin = null;
+            }
+            return true;
+        }
 
         #endregion
     }
