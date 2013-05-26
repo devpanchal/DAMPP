@@ -16,9 +16,40 @@ namespace DAMP_Forms.Forms
             InitializeComponent();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        
+        private void accountMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblPageName.Text = accountMasterToolStripMenuItem.Text;
+        }
 
+        private void transportMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblPageName.Text = transportMasterToolStripMenuItem.Text;
+        }
+
+        private void itemMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblPageName.Text = itemMasterToolStripMenuItem.Text;
+        }
+
+        private void salesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblPageName.Text = salesToolStripMenuItem.Text;
+        }
+
+        private void challanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblPageName.Text = challanToolStripMenuItem.Text;
+        }
+
+        private void freightNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblPageName.Text = freightNoteToolStripMenuItem.Text;
+        }
+
+        private void backUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblPageName.Text = backUpToolStripMenuItem.Text;
         }
     }
 }
