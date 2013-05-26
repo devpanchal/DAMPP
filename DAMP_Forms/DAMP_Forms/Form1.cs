@@ -103,7 +103,7 @@ namespace DAMP_Forms
         {
             try
             {
-                objbLogin.userid = txtUserID.Text.Trim();
+                objbLogin.user_id = txtUserID.Text.Trim();
                 objbLogin.password = txtPassword.Text.Trim();
             }
             catch (Exception ex)

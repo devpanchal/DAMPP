@@ -12,16 +12,16 @@ namespace DAMP_Forms.Business
     {
         #region "Properties"
 
-        private string _userid;
-        public string userid
+        private string _user_id;
+        public string user_id
         {
             get
             {
-                return this._userid;
+                return this._user_id;
             }
             set
             {
-                this._userid = value;
+                this._user_id = value;
             }
         }
 
@@ -100,7 +100,7 @@ namespace DAMP_Forms.Business
             {
                 if (dtTemp != null && dtTemp.Rows.Count > 0)
                 {
-                    this.userid = dtTemp.Rows[0]["userid"].ToString();
+                    this.user_id = dtTemp.Rows[0]["user_id"].ToString();
                     this.password = dtTemp.Rows[0]["password"].ToString();
                 }
             }

@@ -8,7 +8,7 @@ namespace DAMP_Forms.Interface
 {
     interface ILogin
     {
-        string userid { get; set; }
+        string user_id { get; set; }
         string password { get; set; }
         DataTable dtTemp { get; set; }
     }
