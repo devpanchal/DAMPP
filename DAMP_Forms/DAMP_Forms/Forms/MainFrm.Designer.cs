@@ -39,7 +39,8 @@
             this.freightNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.utilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userRegistrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlLogoMain = new System.Windows.Forms.Panel();
             this.pnlLogoSettings = new System.Windows.Forms.Panel();
@@ -47,8 +48,8 @@
             this.lblDAMPName = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlPageDetails = new System.Windows.Forms.Panel();
-            this.pnlButtonBar = new System.Windows.Forms.Panel();
             this.lblPageName = new System.Windows.Forms.Label();
+            this.pnlButtonBar = new System.Windows.Forms.Panel();
             this.pnlMsg = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlDetails = new System.Windows.Forms.Panel();
@@ -150,17 +151,24 @@
             // utilityToolStripMenuItem
             // 
             this.utilityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.backUpToolStripMenuItem});
+            this.userRegistrationToolStripMenuItem,
+            this.backUpToolStripMenuItem1});
             this.utilityToolStripMenuItem.Name = "utilityToolStripMenuItem";
             this.utilityToolStripMenuItem.Size = new System.Drawing.Size(63, 25);
             this.utilityToolStripMenuItem.Text = "Utility";
             // 
-            // backUpToolStripMenuItem
+            // userRegistrationToolStripMenuItem
             // 
-            this.backUpToolStripMenuItem.Name = "backUpToolStripMenuItem";
-            this.backUpToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.backUpToolStripMenuItem.Text = "Back Up";
-            this.backUpToolStripMenuItem.Click += new System.EventHandler(this.backUpToolStripMenuItem_Click);
+            this.userRegistrationToolStripMenuItem.Name = "userRegistrationToolStripMenuItem";
+            this.userRegistrationToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.userRegistrationToolStripMenuItem.Text = "User Registration";
+            this.userRegistrationToolStripMenuItem.Click += new System.EventHandler(this.userRegistrationToolStripMenuItem_Click);
+            // 
+            // backUpToolStripMenuItem1
+            // 
+            this.backUpToolStripMenuItem1.Name = "backUpToolStripMenuItem1";
+            this.backUpToolStripMenuItem1.Size = new System.Drawing.Size(200, 26);
+            this.backUpToolStripMenuItem1.Text = "Back Up";
             // 
             // tableLayoutPanel1
             // 
@@ -243,13 +251,6 @@
             this.pnlPageDetails.Size = new System.Drawing.Size(1256, 27);
             this.pnlPageDetails.TabIndex = 2;
             // 
-            // pnlButtonBar
-            // 
-            this.pnlButtonBar.Location = new System.Drawing.Point(867, 0);
-            this.pnlButtonBar.Name = "pnlButtonBar";
-            this.pnlButtonBar.Size = new System.Drawing.Size(387, 27);
-            this.pnlButtonBar.TabIndex = 1;
-            // 
             // lblPageName
             // 
             this.lblPageName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -261,6 +262,13 @@
             this.lblPageName.Size = new System.Drawing.Size(0, 21);
             this.lblPageName.TabIndex = 0;
             this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pnlButtonBar
+            // 
+            this.pnlButtonBar.Location = new System.Drawing.Point(867, 0);
+            this.pnlButtonBar.Name = "pnlButtonBar";
+            this.pnlButtonBar.Size = new System.Drawing.Size(387, 27);
+            this.pnlButtonBar.TabIndex = 1;
             // 
             // pnlMsg
             // 
@@ -325,7 +333,7 @@
         private System.Windows.Forms.ToolStripMenuItem freightNoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem utilityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem userRegistrationToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel pnlLogoMain;
         private System.Windows.Forms.Panel pnlLogoName;
@@ -338,6 +346,7 @@
         private System.Windows.Forms.Panel pnlMsg;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel pnlDetails;
+        private System.Windows.Forms.ToolStripMenuItem backUpToolStripMenuItem1;
 
 
     }

@@ -13,43 +13,142 @@ namespace DAMP_Forms.Forms
     {
         public MainFrm()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
-        
+
         private void accountMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = accountMasterToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = accountMasterToolStripMenuItem.Text;
+                pnlDetails.Controls.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
+
 
         private void transportMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = transportMasterToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = transportMasterToolStripMenuItem.Text;
+                pnlDetails.Controls.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
         private void itemMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = itemMasterToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = itemMasterToolStripMenuItem.Text;
+                pnlDetails.Controls.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
         private void salesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = salesToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = salesToolStripMenuItem.Text;
+                pnlDetails.Controls.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
         private void challanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = challanToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = challanToolStripMenuItem.Text;
+                pnlDetails.Controls.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
         private void freightNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = freightNoteToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = freightNoteToolStripMenuItem.Text;
+                pnlDetails.Controls.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
 
-        private void backUpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void userRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lblPageName.Text = backUpToolStripMenuItem.Text;
+            try
+            {
+                lblPageName.Text = userRegistrationToolStripMenuItem.Text;
+                cntrlRegistration cntrl = new cntrlRegistration();
+                pnlDetails.Controls.Clear();
+                pnlDetails.Controls.Add(cntrl);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
         }
+
     }
 }

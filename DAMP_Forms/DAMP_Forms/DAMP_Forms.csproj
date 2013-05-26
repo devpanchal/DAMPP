@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Business\bLogin.cs" />
     <Compile Include="Common\dbConnection.cs" />
+    <Compile Include="Controls\cntrlRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cntrlRegistration.Designer.cs">
+      <DependentUpon>cntrlRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\dLogin.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -64,6 +70,9 @@
     <Compile Include="Interface\ILogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\cntrlRegistration.resx">
+      <DependentUpon>cntrlRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,7 +114,6 @@
   <ItemGroup>
     <None Include="Resources\Item_Icon.jpg" />
   </ItemGroup>
-  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
