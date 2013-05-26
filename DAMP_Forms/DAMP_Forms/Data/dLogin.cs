@@ -5,10 +5,12 @@ using System.Text;
 using DAMP_Forms.Interface;
 using System.Data.SqlClient;
 using System.Data;
+using DAMP_Forms.Common;
 
 namespace DAMP_Forms.Data
 {
-    class dLogin
+    
+    class dLogin : dbConnection
     {
         string strSQL = "select * from D_login_table";
 
@@ -17,23 +19,8 @@ namespace DAMP_Forms.Data
             try
             {
                 DataTable dttemp = new DataTable();
-                SqlDataAdapter SqlDtAdapter = new SqlDataAdapter();
-                SqlConnection SqlConn = new SqlConnection(@"Data Source=(local);Initial Catalog=DAMP_db;Integrated Security=True;Pooling=False");
-
-                if (SqlConn.State == ConnectionState.Closed)
-                {
-                    SqlConn.Open();
-                }
-
                 strSQL = strSQL + " where user_id = '" + objILogin.user_id + "'";
-                SqlDtAdapter = new SqlDataAdapter(strSQL, SqlConn);
-                SqlDtAdapter.Fill(dttemp);
-
-                if (SqlConn.State == ConnectionState.Open)
-                {
-                    SqlConn.Close();
-                }
-
+                OpenDataTable(strSQL, out dttemp);
                 if (dttemp != null && dttemp.Rows.Count > 0)
                 {
                     objILogin.dtTemp = dttemp;
