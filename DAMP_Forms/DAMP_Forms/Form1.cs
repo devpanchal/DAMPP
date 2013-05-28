@@ -35,6 +35,7 @@ namespace DAMP_Forms
             try
             {
                 lblMessage.Text = "";
+                this.AcceptButton = btnLogin;
             }
             catch (Exception ex)
             {
