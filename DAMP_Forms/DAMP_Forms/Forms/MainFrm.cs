@@ -32,7 +32,7 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = accountMasterToolStripMenuItem.Text;
+                //lblPageName.Text = accountMasterToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
             }
             catch (Exception ex)
@@ -50,7 +50,7 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = transportMasterToolStripMenuItem.Text;
+                //lblPageName.Text = transportMasterToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
             }
             catch (Exception ex)
@@ -67,7 +67,7 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = itemMasterToolStripMenuItem.Text;
+                //lblPageName.Text = itemMasterToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
             }
             catch (Exception ex)
@@ -84,7 +84,7 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = salesToolStripMenuItem.Text;
+                //lblPageName.Text = salesToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
             }
             catch (Exception ex)
@@ -101,7 +101,7 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = challanToolStripMenuItem.Text;
+                //lblPageName.Text = challanToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
             }
             catch (Exception ex)
@@ -118,7 +118,7 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = freightNoteToolStripMenuItem.Text;
+                //lblPageName.Text = freightNoteToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
             }
             catch (Exception ex)
@@ -135,10 +135,11 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                lblPageName.Text = userRegistrationToolStripMenuItem.Text;
-                cntrlRegistration cntrl = new cntrlRegistration();
+                //lblPageName.Text = userRegistrationToolStripMenuItem.Text;
+                cntrlRegistration objRegistration = new cntrlRegistration();
+                objRegistration.PageName = userRegistrationToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
-                pnlDetails.Controls.Add(cntrl);
+                pnlDetails.Controls.Add(objRegistration);
             }
             catch (Exception ex)
             {

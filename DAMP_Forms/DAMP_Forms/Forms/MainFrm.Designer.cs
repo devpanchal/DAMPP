@@ -47,10 +47,6 @@
             this.pnlLogoName = new System.Windows.Forms.Panel();
             this.lblDAMPName = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.pnlPageDetails = new System.Windows.Forms.Panel();
-            this.lblPageName = new System.Windows.Forms.Label();
-            this.pnlButtonBar = new System.Windows.Forms.Panel();
-            this.pnlMsg = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlDetails = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
@@ -58,7 +54,6 @@
             this.pnlLogoMain.SuspendLayout();
             this.pnlLogoName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.pnlPageDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -177,19 +172,17 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pnlLogoMain, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlPageDetails, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pnlMsg, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pnlBottom, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.pnlDetails, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pnlBottom, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pnlDetails, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1262, 678);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
@@ -241,57 +234,20 @@
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
             // 
-            // pnlPageDetails
-            // 
-            this.pnlPageDetails.Controls.Add(this.lblPageName);
-            this.pnlPageDetails.Controls.Add(this.pnlButtonBar);
-            this.pnlPageDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPageDetails.Location = new System.Drawing.Point(3, 103);
-            this.pnlPageDetails.Name = "pnlPageDetails";
-            this.pnlPageDetails.Size = new System.Drawing.Size(1256, 27);
-            this.pnlPageDetails.TabIndex = 2;
-            // 
-            // lblPageName
-            // 
-            this.lblPageName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPageName.AutoSize = true;
-            this.lblPageName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageName.Location = new System.Drawing.Point(585, 6);
-            this.lblPageName.Name = "lblPageName";
-            this.lblPageName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPageName.Size = new System.Drawing.Size(0, 21);
-            this.lblPageName.TabIndex = 0;
-            this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnlButtonBar
-            // 
-            this.pnlButtonBar.Location = new System.Drawing.Point(867, 0);
-            this.pnlButtonBar.Name = "pnlButtonBar";
-            this.pnlButtonBar.Size = new System.Drawing.Size(387, 27);
-            this.pnlButtonBar.TabIndex = 1;
-            // 
-            // pnlMsg
-            // 
-            this.pnlMsg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMsg.Location = new System.Drawing.Point(3, 136);
-            this.pnlMsg.Name = "pnlMsg";
-            this.pnlMsg.Size = new System.Drawing.Size(1256, 27);
-            this.pnlMsg.TabIndex = 3;
-            // 
             // pnlBottom
             // 
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBottom.Location = new System.Drawing.Point(3, 643);
+            this.pnlBottom.Location = new System.Drawing.Point(3, 638);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1256, 32);
+            this.pnlBottom.Size = new System.Drawing.Size(1256, 37);
             this.pnlBottom.TabIndex = 4;
             // 
             // pnlDetails
             // 
             this.pnlDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDetails.Location = new System.Drawing.Point(3, 169);
+            this.pnlDetails.Location = new System.Drawing.Point(3, 110);
             this.pnlDetails.Name = "pnlDetails";
-            this.pnlDetails.Size = new System.Drawing.Size(1256, 468);
+            this.pnlDetails.Size = new System.Drawing.Size(1256, 522);
             this.pnlDetails.TabIndex = 5;
             // 
             // MainFrm
@@ -314,8 +270,6 @@
             this.pnlLogoName.ResumeLayout(false);
             this.pnlLogoName.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.pnlPageDetails.ResumeLayout(false);
-            this.pnlPageDetails.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,10 +294,6 @@
         private System.Windows.Forms.Panel pnlLogoSettings;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblDAMPName;
-        private System.Windows.Forms.Panel pnlPageDetails;
-        private System.Windows.Forms.Panel pnlButtonBar;
-        private System.Windows.Forms.Label lblPageName;
-        private System.Windows.Forms.Panel pnlMsg;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Panel pnlDetails;
         private System.Windows.Forms.ToolStripMenuItem backUpToolStripMenuItem1;

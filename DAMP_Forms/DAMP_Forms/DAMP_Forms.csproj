@@ -48,6 +48,18 @@
   <ItemGroup>
     <Compile Include="Business\bLogin.cs" />
     <Compile Include="Common\dbConnection.cs" />
+    <Compile Include="Controls\cntrlAccountMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cntrlAccountMaster.Designer.cs">
+      <DependentUpon>cntrlAccountMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cntrlButtonBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cntrlButtonBar.Designer.cs">
+      <DependentUpon>cntrlButtonBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\cntrlRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     <Compile Include="Interface\ILogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\cntrlAccountMaster.resx">
+      <DependentUpon>cntrlAccountMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cntrlButtonBar.resx">
+      <DependentUpon>cntrlButtonBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\cntrlRegistration.resx">
       <DependentUpon>cntrlRegistration.cs</DependentUpon>
     </EmbeddedResource>
