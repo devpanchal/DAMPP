@@ -21,9 +21,9 @@ namespace DAMP_Forms.Data
                 DataTable dttemp = new DataTable();
                 strSQL = strSQL + " where user_id = '" + objILogin.user_id + "'";
                 OpenDataTable(strSQL, out dttemp);
+                objILogin.dtTemp = dttemp;
                 if (dttemp != null && dttemp.Rows.Count > 0)
                 {
-                    objILogin.dtTemp = dttemp;
                     return true;
                 }
                 else
@@ -37,11 +37,25 @@ namespace DAMP_Forms.Data
             }
         }
 
-        public bool SaveData()
+        public bool GetLoginList(out DataTable dtLoginList)
         {
             try
             {
+                dtLoginList = new DataTable();
+                OpenDataTable(strSQL, out dtLoginList);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public bool SaveData(ILogin objILogin)
+        {
+            try
+            {
+                UpdateDataTable(strSQL, objILogin.dtTemp);   
             }
             catch (Exception ex)
             {

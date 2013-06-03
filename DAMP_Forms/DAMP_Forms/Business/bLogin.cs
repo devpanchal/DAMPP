@@ -59,15 +59,15 @@ namespace DAMP_Forms.Business
             set { _email = value; }
         }
 
-        private string _gender;
-        public string gender
+        private byte _gender;
+        public byte gender
         {
             get { return _gender; }
             set { _gender = value; }
         }
 
-        private Int64 _contact_no;
-        public Int64 contact_no
+        private string _contact_no;
+        public string contact_no
         {
             get { return _contact_no; }
             set { _contact_no = value; }
@@ -130,11 +130,31 @@ namespace DAMP_Forms.Business
             }
         }
 
+        public bool GetLoginList(out DataTable dtLoginList)
+        {
+            dLogin objdLogin = new dLogin();
+            try
+            {
+                objdLogin.GetLoginList(out dtLoginList);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                objdLogin = null;
+            }
+        }
+
         public bool SaveData()
         {
             try
             {
-
+                dLogin objdLogin = new dLogin();
+                FillDataTable();
+                objdLogin.SaveData(this);
             }
             catch (Exception ex)
             {
@@ -150,7 +170,47 @@ namespace DAMP_Forms.Business
                 if (dtTemp != null && dtTemp.Rows.Count > 0)
                 {
                     this.user_id = dtTemp.Rows[0]["user_id"].ToString();
+                    this.name = dtTemp.Rows[0]["name"].ToString();
                     this.password = dtTemp.Rows[0]["password"].ToString();
+                    this.email = dtTemp.Rows[0]["email"].ToString();
+                    if (dtTemp.Rows[0]["birthday"] == DBNull.Value)
+                    {
+                        this.birthday = DateTime.Now;
+                    }
+                    else
+                    {
+                        this.birthday = Convert.ToDateTime(dtTemp.Rows[0]["birthday"].ToString());
+                    }
+                    
+                    this.contact_no = dtTemp.Rows[0]["contact_no"].ToString();
+                    this.user_id = dtTemp.Rows[0]["user_id"].ToString();
+                    if (dtTemp.Rows[0]["gender"] == DBNull.Value)
+                    {
+                        this.gender = 0;
+                    }
+                    else
+                    {
+                        this.gender = Convert.ToByte(dtTemp.Rows[0]["gender"]);
+                    }
+
+                    if (dtTemp.Rows[0]["creation_date"] == DBNull.Value)
+                    {
+                        this.creation_date = DateTime.Now;
+                    }
+                    else
+                    {
+                        this.creation_date = Convert.ToDateTime(dtTemp.Rows[0]["creation_date"].ToString());
+                    }
+
+                    if (dtTemp.Rows[0]["updation_date"] == DBNull.Value)
+                    {
+                        this.updation_date = DateTime.Now;
+                    }
+                    else
+                    {
+                        this.updation_date = Convert.ToDateTime(dtTemp.Rows[0]["updation_date"].ToString());
+                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -160,17 +220,32 @@ namespace DAMP_Forms.Business
             return true;
         }
 
-        public bool FillDataTable()
+        public void FillDataTable()
         {
             try
             {
-
+                DataRow dr;
+                if (dtTemp.Rows.Count == 0)
+                {
+                    dr = dtTemp.NewRow();
+                    dtTemp.Rows.Add(dr);
+                }
+                if (dtTemp.Rows[0].RowState == DataRowState.Deleted) return;
+                dr = dtTemp.Rows[0];
+                dr["user_id"] = this.user_id;
+                dr["password"] = this.password;
+                dr["name"] = this.name;
+                dr["birthday"] = this.birthday;
+                dr["email"] = this.email;
+                dr["gender"] = this.gender;
+                dr["contact_no"] = this.contact_no;
+                dr["creation_date"] = this.creation_date;
+                dr["updation_date"] = this.updation_date;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return true;
         }
 
         public bool LoginAuthentication(string TypPassword)

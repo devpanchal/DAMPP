@@ -9,7 +9,7 @@ namespace DAMP_Forms.Common
 {
     class dbConnection
     {
-        SqlConnection SqlConn = new SqlConnection(@"Data Source=(local);Initial Catalog=DAMP_db;Integrated Security=True;Pooling=False");
+        SqlConnection SqlConn = new SqlConnection(@"Data Source=(local)\SQLExpress;Initial Catalog=DAMP_db;Integrated Security=True;Pooling=False");
         SqlDataAdapter SqlDtAdapter;
         SqlCommand SqlCmd;
         SqlCommandBuilder sqlCmdBuldr;

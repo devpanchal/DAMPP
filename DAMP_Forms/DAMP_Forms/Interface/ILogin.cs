@@ -13,8 +13,8 @@ namespace DAMP_Forms.Interface
         string name { get; set; }
         DateTime birthday { get; set; }
         string email { get; set; }
-        string gender { get; set; }
-        Int64 contact_no { get; set; }
+        byte gender { get; set; }
+        string contact_no { get; set; }
         DateTime creation_date { get; set; }
         DateTime updation_date { get; set; }
 

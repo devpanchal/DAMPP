@@ -49,6 +49,9 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblUserDetails = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblPageName = new System.Windows.Forms.Label();
             this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
@@ -105,6 +108,7 @@
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(100, 20);
             this.txtUserID.TabIndex = 1;
+            this.txtUserID.Leave += new System.EventHandler(this.txtUserID_Leave);
             // 
             // txtUserName
             // 
@@ -298,6 +302,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.623931F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.37607F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(627, 440);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -317,10 +322,33 @@
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(85, 32);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.user_id,
+            this.name,
+            this.gender});
+            this.dataGridView1.Location = new System.Drawing.Point(109, 32);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(457, 150);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(408, 150);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // user_id
+            // 
+            this.user_id.DataPropertyName = "user_id";
+            this.user_id.HeaderText = "User ID";
+            this.user_id.Name = "user_id";
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
             // 
             // panel2
             // 
@@ -347,10 +375,14 @@
             // cntrlButtonBar1
             // 
             this.cntrlButtonBar1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.cntrlButtonBar1.Location = new System.Drawing.Point(869, 0);
+            this.cntrlButtonBar1.Location = new System.Drawing.Point(865, 3);
+            this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
             this.cntrlButtonBar1.Name = "cntrlButtonBar1";
-            this.cntrlButtonBar1.Size = new System.Drawing.Size(387, 34);
+            this.cntrlButtonBar1.Size = new System.Drawing.Size(387, 30);
             this.cntrlButtonBar1.TabIndex = 1;
+            this.cntrlButtonBar1.btnSaveClick += new DAMP_Forms.Controls.cntrlButtonBar.btnSaveClickHandler(this.cntrlButtonBar1_btnSaveClick);
+            this.cntrlButtonBar1.btnNewClick += new DAMP_Forms.Controls.cntrlButtonBar.btnNewClickHandler(this.cntrlButtonBar1_btnNewClick);
+            this.cntrlButtonBar1.btnDeleteClick += new DAMP_Forms.Controls.cntrlButtonBar.btnDeleteClickHandler(this.cntrlButtonBar1_btnDeleteClick);
             // 
             // pnlMsg
             // 
@@ -406,10 +438,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblUserDetails;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblPageName;
         private Controls.cntrlButtonBar cntrlButtonBar1;
         private System.Windows.Forms.Panel pnlMsg;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn user_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
     }
 }
