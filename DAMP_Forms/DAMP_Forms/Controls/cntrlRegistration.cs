@@ -17,6 +17,14 @@ namespace DAMP_Forms
 
         private bLogin objbLogin = new bLogin();
 
+        enum FormMode
+        {
+            None,
+            Add,
+            Edit,
+            View
+        }
+
         #endregion
 
         #region Constructor
@@ -34,13 +42,9 @@ namespace DAMP_Forms
         {
             try
             {
-                DataTable dtLoginList;
-                objbLogin.GetLoginList(out dtLoginList);
-                dataGridView1.AutoGenerateColumns = false;
-                dataGridView1.DataSource = dtLoginList;
-                //dataGridView1.DataMember = "user_id";
-
+                FillGrid();
                 FillInitalizedata();
+                EDState(FormMode.None);
             }
             catch (Exception ex)
             {
@@ -177,17 +181,53 @@ namespace DAMP_Forms
             }
         }
 
-        #endregion
-
-        private void txtUserID_Leave(object sender, EventArgs e)
+        private bool Validation()
         {
             try
             {
-                objbLogin.user_id = txtUserID.Text.Trim();
-                objbLogin.GetData();
+                if (txtUserID.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please enter User ID");
+                    txtUserID.Focus();
+                    return false;
+                }
 
-                ClearFormDetail();
-                FillFormDetail();
+                if (txtUserName.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please enter User Name");
+                    txtUserName.Focus();
+                    return false;
+                }
+
+                if (txtPassword.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please enter Password");
+                    txtPassword.Focus();
+                    return false;
+                }
+
+                if (txtPassword.Text.Trim().Length < 5)
+                {
+                    MessageBox.Show("Minimum lenght of Password is 5");
+                    txtPassword.Focus();
+                    return false;
+                }
+
+                if (txtRePassword.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("Please enter Re-Password");
+                    txtRePassword.Focus();
+                    return false;
+                }
+
+                if (!txtPassword.Text.Trim().Equals(txtRePassword.Text.Trim()))
+                {
+                    MessageBox.Show("Password is not match");
+                    txtRePassword.Focus();
+                    return false;
+                }
+
+                return true;
             }
             catch (Exception ex)
             {
@@ -195,14 +235,130 @@ namespace DAMP_Forms
             }
         }
 
+        private void FillGrid()
+        {
+            try
+            {
+                DataTable dtLoginList;
+                objbLogin.GetLoginList(out dtLoginList);
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = dtLoginList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void EnblDsblControls(Control con, bool EnblDsblFlag)
+        {
+            foreach (Control c in con.Controls)
+            {
+                EnblDsblControls(c, EnblDsblFlag);
+            }
+            con.Enabled = EnblDsblFlag;
+        }
+
+        private void EDState(FormMode frmMode)
+        {
+            try
+            {
+                if (FormMode.None == frmMode)
+                {
+                    EnblDsblControls(tableLayoutPanel1, false);
+                    EnblDsblControls(tableLayoutPanel3, false);
+                }
+                else if (FormMode.View == frmMode)
+                {
+                    EnblDsblControls(tableLayoutPanel1, false);
+                    EnblDsblControls(tableLayoutPanel3, true);
+                }
+                else if (FormMode.Edit == frmMode)
+                {
+                    EnblDsblControls(tableLayoutPanel1, true);
+                    EnblDsblControls(tableLayoutPanel3, false);
+                }
+                else if (FormMode.Add == frmMode)
+                {
+                    EnblDsblControls(tableLayoutPanel1, true);
+                    EnblDsblControls(tableLayoutPanel3, true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region "Control Click Event"
+
+        private void txtUserID_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtUserID.Text.Trim() != string.Empty)
+                {
+                    objbLogin.user_id = txtUserID.Text.Trim();
+                    if (objbLogin.GetData())
+                    {
+
+                        ClearFormDetail();
+                        FillFormDetail();
+                        EDState(FormMode.View);
+                    }
+                    else
+                    {
+                        ClearFormDetail();
+                        EDState(FormMode.View);
+                        MessageBox.Show("User ID is not exiest");
+                    }
+                }
+                else
+                {
+                    ClearFormDetail();
+                    txtUserID.Focus();
+                    EDState(FormMode.View);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string strUserid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtUserID.Text = strUserid;
+                txtUserID_Leave(null, null);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        #region "Button Event"
+
         private void cntrlButtonBar1_btnSaveClick(object sender, EventArgs e)
         {
             try
             {
+                if (!Validation()) return;
+
                 InitalizeData();
                 SetData();
                 objbLogin.SaveData();
-
+                FillGrid();
+                EDState(FormMode.View);
+                MessageBox.Show("Save Successfully");
             }
             catch (Exception ex)
             {
@@ -218,6 +374,7 @@ namespace DAMP_Forms
                 objbLogin.GetData();
                 ClearFormDetail();
                 txtUserID.Focus();
+                EDState(FormMode.Add);
             }
             catch (Exception ex)
             {
@@ -229,12 +386,66 @@ namespace DAMP_Forms
         {
             try
             {
-                objbLogin.user_id = txtUserID.Text.Trim();
-                objbLogin.GetData();
+                if (txtUserID.Text.Trim() != string.Empty)
+                {
+                    objbLogin.user_id = txtUserID.Text.Trim();
+                    objbLogin.GetData();
 
-                objbLogin.dtTemp.Rows[0].Delete();
-                objbLogin.SaveData();
-                ClearFormDetail();
+                    objbLogin.dtTemp.Rows[0].Delete();
+                    objbLogin.SaveData();
+                    ClearFormDetail();
+                    FillGrid();
+                    EDState(FormMode.View);
+                    MessageBox.Show("Deleted Successfully");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void cntrlButtonBar1_btnCloseClick(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #endregion
+
+        private void cntrlButtonBar2_btnEditClick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtUserID.Text.Trim() != string.Empty)
+                {
+                    objbLogin.user_id = txtUserID.Text.Trim();
+                    if (objbLogin.GetData())
+                    {
+
+                        ClearFormDetail();
+                        FillFormDetail();
+                        EDState(FormMode.Edit);
+                    }
+                    else
+                    {
+                        ClearFormDetail();
+                        EDState(FormMode.View);
+                        MessageBox.Show("User ID is not exiest");
+                    }
+                }
+                else
+                {
+                    ClearFormDetail();
+                    txtUserID.Focus();
+                    EDState(FormMode.View);
+                }
             }
             catch (Exception ex)
             {
