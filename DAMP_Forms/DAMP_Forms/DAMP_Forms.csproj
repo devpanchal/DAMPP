@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="Business\bLogin.cs" />
     <Compile Include="Class\DAMPGlobalVar.cs" />
+    <Compile Include="Common\bCommon.cs" />
     <Compile Include="Common\dbConnection.cs" />
+    <Compile Include="Common\IEnum.cs" />
     <Compile Include="Controls\cntrlAccountMaster.cs">
       <SubType>UserControl</SubType>
     </Compile>
