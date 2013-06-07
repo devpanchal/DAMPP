@@ -188,18 +188,21 @@
             // 
             // pnlLogoMain
             // 
+            this.pnlLogoMain.BackColor = System.Drawing.Color.White;
             this.pnlLogoMain.Controls.Add(this.pnlLogoSettings);
             this.pnlLogoMain.Controls.Add(this.pnlLogoName);
             this.pnlLogoMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLogoMain.Location = new System.Drawing.Point(3, 3);
+            this.pnlLogoMain.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogoMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogoMain.Name = "pnlLogoMain";
-            this.pnlLogoMain.Size = new System.Drawing.Size(1256, 61);
+            this.pnlLogoMain.Size = new System.Drawing.Size(1262, 67);
             this.pnlLogoMain.TabIndex = 1;
             // 
             // pnlLogoSettings
             // 
             this.pnlLogoSettings.BackColor = System.Drawing.Color.White;
             this.pnlLogoSettings.Location = new System.Drawing.Point(950, 2);
+            this.pnlLogoSettings.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogoSettings.Name = "pnlLogoSettings";
             this.pnlLogoSettings.Size = new System.Drawing.Size(304, 59);
             this.pnlLogoSettings.TabIndex = 1;
@@ -210,6 +213,7 @@
             this.pnlLogoName.Controls.Add(this.lblDAMPName);
             this.pnlLogoName.Controls.Add(this.picLogo);
             this.pnlLogoName.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogoName.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogoName.Name = "pnlLogoName";
             this.pnlLogoName.Size = new System.Drawing.Size(950, 61);
             this.pnlLogoName.TabIndex = 0;
@@ -220,6 +224,7 @@
             this.lblDAMPName.Font = new System.Drawing.Font("Segoe UI", 30.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDAMPName.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblDAMPName.Location = new System.Drawing.Point(67, 2);
+            this.lblDAMPName.Margin = new System.Windows.Forms.Padding(0);
             this.lblDAMPName.Name = "lblDAMPName";
             this.lblDAMPName.Size = new System.Drawing.Size(394, 55);
             this.lblDAMPName.TabIndex = 1;
@@ -229,6 +234,7 @@
             // 
             this.picLogo.Image = global::DAMP_Forms.Properties.Resources.logo;
             this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(0);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(61, 61);
             this.picLogo.TabIndex = 0;

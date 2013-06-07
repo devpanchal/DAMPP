@@ -19,14 +19,6 @@ namespace DAMP_Forms
         IEnums.FormMode frmMode;
         private bLogin objbLogin = new bLogin();
 
-        //enum FormMode
-        //{
-        //    None,
-        //    Add,
-        //    Edit,
-        //    View
-        //}
-
         #endregion
 
         #region "Page Level Event"
@@ -52,23 +44,6 @@ namespace DAMP_Forms
             {
                 throw ex;
             }
-        }
-
-        #endregion
-
-        #region Properties
-
-        public string regPageName
-        {
-            get 
-            {
-                return cntrlButtonBar1.PageName;
-            }
-            set 
-            {
-                cntrlButtonBar1.PageName = value;
-            }
-
         }
 
         #endregion

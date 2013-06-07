@@ -180,6 +180,18 @@ namespace DAMP_Forms.Controls
             }
         }
 
+        public string SetPageTitle
+        {
+            get
+            {
+                return this.lblPageName.Text;
+            }
+            set
+            {
+                this.lblPageName.Text = value;
+            }
+        }
+
         #endregion
     }
 }

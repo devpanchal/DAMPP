@@ -139,7 +139,7 @@
             this.txtEmailID.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtEmailID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmailID.Location = new System.Drawing.Point(223, 182);
-            this.txtEmailID.MaxLength = 10;
+            this.txtEmailID.MaxLength = 50;
             this.txtEmailID.Name = "txtEmailID";
             this.txtEmailID.Size = new System.Drawing.Size(266, 20);
             this.txtEmailID.TabIndex = 14;
@@ -375,7 +375,8 @@
             this.cntrlButtonBar1.Location = new System.Drawing.Point(6, 4);
             this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
             this.cntrlButtonBar1.Name = "cntrlButtonBar1";
-            this.cntrlButtonBar1.PageName = "PageName";
+            this.cntrlButtonBar1.PageName = "Registration Page";
+            this.cntrlButtonBar1.SetPageTitle = "Registration Page";
             this.cntrlButtonBar1.Size = new System.Drawing.Size(1245, 30);
             this.cntrlButtonBar1.TabIndex = 0;
             this.cntrlButtonBar1.VisibleCloseBtn = true;
