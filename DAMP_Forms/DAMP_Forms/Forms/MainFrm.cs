@@ -137,7 +137,7 @@ namespace DAMP_Forms.Forms
             {
                 //lblPageName.Text = userRegistrationToolStripMenuItem.Text;
                 cntrlRegistration objRegistration = new cntrlRegistration();
-                objRegistration.PageName = userRegistrationToolStripMenuItem.Text;
+                objRegistration.regPageName = userRegistrationToolStripMenuItem.Text;
                 pnlDetails.Controls.Clear();
                 pnlDetails.Controls.Add(objRegistration);
             }

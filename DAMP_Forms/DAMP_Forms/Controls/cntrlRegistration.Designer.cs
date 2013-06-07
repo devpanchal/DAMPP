@@ -53,11 +53,10 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cntrlButtonBar2 = new DAMP_Forms.Controls.cntrlButtonBar();
-            this.lblPageName = new System.Windows.Forms.Label();
             this.pnlMsg = new System.Windows.Forms.Panel();
-            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
+            this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -362,45 +361,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cntrlButtonBar2);
-            this.panel2.Controls.Add(this.lblPageName);
+            this.panel2.Controls.Add(this.cntrlButtonBar1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1256, 35);
             this.panel2.TabIndex = 2;
-            // 
-            // cntrlButtonBar2
-            // 
-            this.cntrlButtonBar2.Location = new System.Drawing.Point(863, 4);
-            this.cntrlButtonBar2.Margin = new System.Windows.Forms.Padding(0);
-            this.cntrlButtonBar2.Name = "cntrlButtonBar2";
-            this.cntrlButtonBar2.Size = new System.Drawing.Size(387, 29);
-            this.cntrlButtonBar2.TabIndex = 1;
-            this.cntrlButtonBar2.VisibleCloseBtn = true;
-            this.cntrlButtonBar2.VisibleDeleteBtn = true;
-            this.cntrlButtonBar2.VisibleEditBtn = true;
-            this.cntrlButtonBar2.VisibleListBtn = false;
-            this.cntrlButtonBar2.VisibleNewBtn = true;
-            this.cntrlButtonBar2.VisibleSaveBtn = true;
-            this.cntrlButtonBar2.btnCloseClick += new DAMP_Forms.Controls.cntrlButtonBar.btnCloseClickHandler(this.cntrlButtonBar1_btnCloseClick);
-            this.cntrlButtonBar2.btnSaveClick += new DAMP_Forms.Controls.cntrlButtonBar.btnSaveClickHandler(this.cntrlButtonBar1_btnSaveClick);
-            this.cntrlButtonBar2.btnEditClick += new DAMP_Forms.Controls.cntrlButtonBar.btnEditClickHandler(this.cntrlButtonBar2_btnEditClick);
-            this.cntrlButtonBar2.btnNewClick += new DAMP_Forms.Controls.cntrlButtonBar.btnNewClickHandler(this.cntrlButtonBar1_btnNewClick);
-            this.cntrlButtonBar2.btnDeleteClick += new DAMP_Forms.Controls.cntrlButtonBar.btnDeleteClickHandler(this.cntrlButtonBar1_btnDeleteClick);
-            // 
-            // lblPageName
-            // 
-            this.lblPageName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPageName.AutoSize = true;
-            this.lblPageName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageName.Location = new System.Drawing.Point(628, 0);
-            this.lblPageName.Name = "lblPageName";
-            this.lblPageName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPageName.Size = new System.Drawing.Size(0, 21);
-            this.lblPageName.TabIndex = 0;
-            this.lblPageName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlMsg
             // 
@@ -410,14 +377,6 @@
             this.pnlMsg.Name = "pnlMsg";
             this.pnlMsg.Size = new System.Drawing.Size(1256, 34);
             this.pnlMsg.TabIndex = 4;
-            // 
-            // lblErrMsg
-            // 
-            this.lblErrMsg.Location = new System.Drawing.Point(41, 6);
-            this.lblErrMsg.Margin = new System.Windows.Forms.Padding(0);
-            this.lblErrMsg.Name = "lblErrMsg";
-            this.lblErrMsg.Size = new System.Drawing.Size(1169, 22);
-            this.lblErrMsg.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -434,6 +393,31 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(626, 51);
             this.tableLayoutPanel3.TabIndex = 5;
+            // 
+            // lblErrMsg
+            // 
+            this.lblErrMsg.Location = new System.Drawing.Point(41, 6);
+            this.lblErrMsg.Margin = new System.Windows.Forms.Padding(0);
+            this.lblErrMsg.Name = "lblErrMsg";
+            this.lblErrMsg.Size = new System.Drawing.Size(1169, 22);
+            this.lblErrMsg.TabIndex = 0;
+            // 
+            // cntrlButtonBar1
+            // 
+            this.cntrlButtonBar1.BackColor = System.Drawing.Color.White;
+            this.cntrlButtonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cntrlButtonBar1.Location = new System.Drawing.Point(0, 0);
+            this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.cntrlButtonBar1.Name = "cntrlButtonBar1";
+            this.cntrlButtonBar1.PageName = "PageName";
+            this.cntrlButtonBar1.Size = new System.Drawing.Size(1256, 35);
+            this.cntrlButtonBar1.TabIndex = 0;
+            this.cntrlButtonBar1.VisibleCloseBtn = true;
+            this.cntrlButtonBar1.VisibleDeleteBtn = true;
+            this.cntrlButtonBar1.VisibleEditBtn = true;
+            this.cntrlButtonBar1.VisibleListBtn = true;
+            this.cntrlButtonBar1.VisibleNewBtn = true;
+            this.cntrlButtonBar1.VisibleSaveBtn = true;
             // 
             // cntrlRegistration
             // 
@@ -455,7 +439,6 @@
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.pnlMsg.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -484,7 +467,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblUserDetails;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblPageName;
         private System.Windows.Forms.Panel pnlMsg;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn user_id;
@@ -493,7 +475,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.Label lblContactNo;
-        private Controls.cntrlButtonBar cntrlButtonBar2;
         private Controls.cntrlErrMessage lblErrMsg;
+        private Controls.cntrlButtonBar cntrlButtonBar1;
     }
 }

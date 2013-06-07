@@ -58,15 +58,15 @@ namespace DAMP_Forms
 
         #region Properties
 
-        public string PageName
+        public string regPageName
         {
             get 
             {
-                return this.lblPageName.Text;
+                return cntrlButtonBar1.PageName;
             }
             set 
             {
-                this.lblPageName.Text = value;
+                cntrlButtonBar1.PageName = value;
             }
 
         }

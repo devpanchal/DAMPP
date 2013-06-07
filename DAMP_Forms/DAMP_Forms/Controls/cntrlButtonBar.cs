@@ -108,6 +108,18 @@ namespace DAMP_Forms.Controls
             }
         }
 
+        public string PageName
+        {
+            get
+            {
+                return this.lblPageName.Text;
+            }
+            set
+            {
+                this.lblPageName.Text = value;
+            }
+        }
+
         public bool VisibleCloseBtn
         {
             get
