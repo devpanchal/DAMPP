@@ -315,10 +315,13 @@ namespace DAMP_Forms
                     }
                     else
                     {
-                        ClearFormDetail();
-                        frmMode = FormMode.View;
-                        EDState(frmMode);
-                        lblErrMsg.ShowErrorMsg("User ID is not exiest");
+                        if (frmMode != FormMode.Add)
+                        {
+                            ClearFormDetail();
+                            frmMode = FormMode.View;
+                            EDState(frmMode);
+                            lblErrMsg.ShowErrorMsg("User ID is not exiest");
+                        }
                     }
                 }
                 else
