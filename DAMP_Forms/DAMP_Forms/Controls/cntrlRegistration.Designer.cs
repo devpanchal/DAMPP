@@ -56,12 +56,14 @@
             this.cntrlButtonBar2 = new DAMP_Forms.Controls.cntrlButtonBar();
             this.lblPageName = new System.Windows.Forms.Label();
             this.pnlMsg = new System.Windows.Forms.Panel();
+            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.pnlMsg.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -376,6 +378,12 @@
             this.cntrlButtonBar2.Name = "cntrlButtonBar2";
             this.cntrlButtonBar2.Size = new System.Drawing.Size(387, 29);
             this.cntrlButtonBar2.TabIndex = 1;
+            this.cntrlButtonBar2.VisibleCloseBtn = true;
+            this.cntrlButtonBar2.VisibleDeleteBtn = true;
+            this.cntrlButtonBar2.VisibleEditBtn = true;
+            this.cntrlButtonBar2.VisibleListBtn = false;
+            this.cntrlButtonBar2.VisibleNewBtn = true;
+            this.cntrlButtonBar2.VisibleSaveBtn = true;
             this.cntrlButtonBar2.btnCloseClick += new DAMP_Forms.Controls.cntrlButtonBar.btnCloseClickHandler(this.cntrlButtonBar1_btnCloseClick);
             this.cntrlButtonBar2.btnSaveClick += new DAMP_Forms.Controls.cntrlButtonBar.btnSaveClickHandler(this.cntrlButtonBar1_btnSaveClick);
             this.cntrlButtonBar2.btnEditClick += new DAMP_Forms.Controls.cntrlButtonBar.btnEditClickHandler(this.cntrlButtonBar2_btnEditClick);
@@ -396,11 +404,20 @@
             // 
             // pnlMsg
             // 
+            this.pnlMsg.Controls.Add(this.lblErrMsg);
             this.pnlMsg.Location = new System.Drawing.Point(0, 37);
             this.pnlMsg.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMsg.Name = "pnlMsg";
             this.pnlMsg.Size = new System.Drawing.Size(1256, 34);
             this.pnlMsg.TabIndex = 4;
+            // 
+            // lblErrMsg
+            // 
+            this.lblErrMsg.Location = new System.Drawing.Point(41, 6);
+            this.lblErrMsg.Margin = new System.Windows.Forms.Padding(0);
+            this.lblErrMsg.Name = "lblErrMsg";
+            this.lblErrMsg.Size = new System.Drawing.Size(1169, 22);
+            this.lblErrMsg.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -439,6 +456,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlMsg.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
@@ -476,5 +494,6 @@
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.Label lblContactNo;
         private Controls.cntrlButtonBar cntrlButtonBar2;
+        private Controls.cntrlErrMessage lblErrMsg;
     }
 }

@@ -11,6 +11,7 @@ using DAMP_Forms.Forms;
 using DAMP_Forms.Business;
 using System.Configuration;
 using System.Security.Cryptography;
+using DAMP_Forms.Class;
 
 namespace DAMP_Forms
 {
@@ -55,6 +56,7 @@ namespace DAMP_Forms
                 SetData();
                 if (objbLogin.LoginAuthentication(txtPassword.Text.Trim()))
                 {
+                    DAMPGlobalVar.LoginUserID = txtUserID.Text.Trim();
                     MainFrm frm1 = new MainFrm();
                     this.Hide();
                     frm1.Show();

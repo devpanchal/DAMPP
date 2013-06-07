@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DAMP_Forms.Business;
+using DAMP_Forms.Class;
 
 namespace DAMP_Forms
 {
     public partial class cntrlRegistration : UserControl
     {
 
-        #region Variables
+        #region "Variables"
 
+        FormMode frmMode;
         private bLogin objbLogin = new bLogin();
 
         enum FormMode
@@ -27,16 +29,12 @@ namespace DAMP_Forms
 
         #endregion
 
-        #region Constructor
+        #region "Page Level Event"
 
         public cntrlRegistration()
         {
             InitializeComponent();
         }
-
-        #endregion
-
-        #region Control Level Function
 
         private void cntrlRegistration_Load(object sender, EventArgs e)
         {
@@ -44,7 +42,11 @@ namespace DAMP_Forms
             {
                 FillGrid();
                 FillInitalizedata();
-                EDState(FormMode.None);
+                frmMode = FormMode.View;
+                EDState(frmMode);
+                txtUserID.Text = DAMPGlobalVar.LoginUserID;
+                txtUserID_Leave(null, null);
+                lblErrMsg.ClearMsg();
             }
             catch (Exception ex)
             {
@@ -121,11 +123,12 @@ namespace DAMP_Forms
         {
             try
             {
+                txtUserID.Text = string.Empty;
                 txtUserName.Text = string.Empty;
                 txtPassword.Text = string.Empty;
                 txtRePassword.Text = string.Empty;
                 txtEmailID.Text = string.Empty;
-                cboGender.Text = "Male";
+                cboGender.SelectedIndex = 0;
                 dtpBirthday.Text = string.Empty;
                 txtContactNo.Text = string.Empty;
             }
@@ -187,42 +190,42 @@ namespace DAMP_Forms
             {
                 if (txtUserID.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("Please enter User ID");
+                    lblErrMsg.ShowErrorMsg("Please enter User ID");
                     txtUserID.Focus();
                     return false;
                 }
 
                 if (txtUserName.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("Please enter User Name");
+                    lblErrMsg.ShowErrorMsg("Please enter User Name");
                     txtUserName.Focus();
                     return false;
                 }
 
                 if (txtPassword.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("Please enter Password");
+                    lblErrMsg.ShowErrorMsg("Please enter Password");
                     txtPassword.Focus();
                     return false;
                 }
 
                 if (txtPassword.Text.Trim().Length < 5)
                 {
-                    MessageBox.Show("Minimum lenght of Password is 5");
+                    lblErrMsg.ShowErrorMsg("Minimum lenght of Password is 5");
                     txtPassword.Focus();
                     return false;
                 }
 
                 if (txtRePassword.Text.Trim() == string.Empty)
                 {
-                    MessageBox.Show("Please enter Re-Password");
+                    lblErrMsg.ShowErrorMsg("Please enter Re-Password");
                     txtRePassword.Focus();
                     return false;
                 }
 
                 if (!txtPassword.Text.Trim().Equals(txtRePassword.Text.Trim()))
                 {
-                    MessageBox.Show("Password is not match");
+                    lblErrMsg.ShowErrorMsg("Password is not match");
                     txtRePassword.Focus();
                     return false;
                 }
@@ -307,20 +310,23 @@ namespace DAMP_Forms
 
                         ClearFormDetail();
                         FillFormDetail();
-                        EDState(FormMode.View);
+                        frmMode = FormMode.View;
+                        EDState(frmMode);
                     }
                     else
                     {
                         ClearFormDetail();
-                        EDState(FormMode.View);
-                        MessageBox.Show("User ID is not exiest");
+                        frmMode = FormMode.View;
+                        EDState(frmMode);
+                        lblErrMsg.ShowErrorMsg("User ID is not exiest");
                     }
                 }
                 else
                 {
                     ClearFormDetail();
                     txtUserID.Focus();
-                    EDState(FormMode.View);
+                    frmMode = FormMode.View;
+                    EDState(frmMode);
                 }
             }
             catch (Exception ex)
@@ -357,8 +363,9 @@ namespace DAMP_Forms
                 SetData();
                 objbLogin.SaveData();
                 FillGrid();
-                EDState(FormMode.View);
-                MessageBox.Show("Save Successfully");
+                frmMode = FormMode.View;
+                EDState(frmMode);
+                lblErrMsg.ShowMsg(DAMPGlobalVar.SaveSuccessFully);
             }
             catch (Exception ex)
             {
@@ -374,7 +381,8 @@ namespace DAMP_Forms
                 objbLogin.GetData();
                 ClearFormDetail();
                 txtUserID.Focus();
-                EDState(FormMode.Add);
+                frmMode = FormMode.Add;
+                EDState(frmMode);
             }
             catch (Exception ex)
             {
@@ -395,8 +403,9 @@ namespace DAMP_Forms
                     objbLogin.SaveData();
                     ClearFormDetail();
                     FillGrid();
-                    EDState(FormMode.View);
-                    MessageBox.Show("Deleted Successfully");
+                    frmMode = FormMode.View;
+                    EDState(frmMode);
+                    lblErrMsg.ShowMsg(DAMPGlobalVar.DeleteSuccessFully);
                 }
             }
             catch (Exception ex)
@@ -417,8 +426,6 @@ namespace DAMP_Forms
             }
         }
 
-        #endregion
-
         private void cntrlButtonBar2_btnEditClick(object sender, EventArgs e)
         {
             try
@@ -431,20 +438,23 @@ namespace DAMP_Forms
 
                         ClearFormDetail();
                         FillFormDetail();
-                        EDState(FormMode.Edit);
+                        frmMode = FormMode.View;
+                        EDState(frmMode);
                     }
                     else
                     {
                         ClearFormDetail();
-                        EDState(FormMode.View);
-                        MessageBox.Show("User ID is not exiest");
+                        frmMode = FormMode.View;
+                        EDState(frmMode);
+                        lblErrMsg.ShowErrorMsg("User ID is not exiest");
                     }
                 }
                 else
                 {
                     ClearFormDetail();
                     txtUserID.Focus();
-                    EDState(FormMode.View);
+                    frmMode = FormMode.View;
+                    EDState(frmMode);
                 }
             }
             catch (Exception ex)
@@ -452,6 +462,8 @@ namespace DAMP_Forms
                 throw ex;
             }
         }
+
+        #endregion
 
     }
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\bLogin.cs" />
+    <Compile Include="Class\DAMPGlobalVar.cs" />
     <Compile Include="Common\dbConnection.cs" />
     <Compile Include="Controls\cntrlAccountMaster.cs">
       <SubType>UserControl</SubType>
@@ -59,6 +60,12 @@
     </Compile>
     <Compile Include="Controls\cntrlButtonBar.Designer.cs">
       <DependentUpon>cntrlButtonBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cntrlErrMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cntrlErrMessage.Designer.cs">
+      <DependentUpon>cntrlErrMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\cntrlRegistration.cs">
       <SubType>UserControl</SubType>
@@ -87,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\cntrlButtonBar.resx">
       <DependentUpon>cntrlButtonBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cntrlErrMessage.resx">
+      <DependentUpon>cntrlErrMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\cntrlRegistration.resx">
       <DependentUpon>cntrlRegistration.cs</DependentUpon>

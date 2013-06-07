@@ -93,5 +93,81 @@ namespace DAMP_Forms.Controls
         }
 
         #endregion
+
+        #region "Properties"
+
+        public bool VisibleDeleteBtn
+        {
+            get
+            {
+                return this.btnDelete.Visible;
+            }
+            set
+            {
+                this.btnDelete.Visible = value;
+            }
+        }
+
+        public bool VisibleCloseBtn
+        {
+            get
+            {
+                return this.btnClose.Visible;
+            }
+            set
+            {
+                this.btnClose.Visible = value;
+            }
+        }
+
+        public bool VisibleEditBtn
+        {
+            get
+            {
+                return this.btnEdit.Visible;
+            }
+            set
+            {
+                this.btnEdit.Visible = value;
+            }
+        }
+
+        public bool VisibleSaveBtn
+        {
+            get
+            {
+                return this.btnSave.Visible;
+            }
+            set
+            {
+                this.btnSave.Visible = value;
+            }
+        }
+
+        public bool VisibleNewBtn
+        {
+            get
+            {
+                return this.btnNew.Visible;
+            }
+            set
+            {
+                this.btnNew.Visible = value;
+            }
+        }
+
+        public bool VisibleListBtn
+        {
+            get
+            {
+                return this.btnList.Visible;
+            }
+            set
+            {
+                this.btnList.Visible = value;
+            }
+        }
+
+        #endregion
     }
 }
