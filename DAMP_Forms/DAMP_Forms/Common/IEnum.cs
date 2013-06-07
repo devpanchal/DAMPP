@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DAMP_Forms
 {
-    public interface IEnums
+    public static class IEnums
     {
         public enum FormMode
         {

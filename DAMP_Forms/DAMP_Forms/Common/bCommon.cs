@@ -4,19 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DAMP_Forms.Common
+namespace DAMP_Forms
 {
     public static class bCommon
     {
-        public enum FormMode
-                {
-                    None,
-                    Add,
-                    Edit,
-                    View
-                }
-
-        public static void ShowButton(UserControl CurrentPage, FormMode frmMode)
+        public static void ShowButton(UserControl CurrentPage, IEnums.FormMode frmMode)
         {
             try
             {
@@ -27,7 +19,7 @@ namespace DAMP_Forms.Common
                 Button btnDelete = (Button)CurrentPage.Controls["flowLayoutPanel1"].Controls["btnDelete"];
                 Button btnClose = (Button)CurrentPage.Controls["flowLayoutPanel1"].Controls["btnClose"];
 
-                if (FormMode.None == frmMode)
+                if (IEnums.FormMode.None == frmMode)
                 {
                     btnNew.Enabled = true;
                     btnEdit.Enabled = false;
@@ -37,7 +29,7 @@ namespace DAMP_Forms.Common
                     btnClose.Enabled = true;
                 }
 
-                if (FormMode.Add == frmMode)
+                if (IEnums.FormMode.Add == frmMode)
                 {
                     btnNew.Enabled = false;
                     btnEdit.Enabled = false;
@@ -47,7 +39,7 @@ namespace DAMP_Forms.Common
                     btnClose.Enabled = true;
                 }
 
-                if (FormMode.Edit == frmMode)
+                if (IEnums.FormMode.Edit == frmMode)
                 {
                     btnNew.Enabled = true;
                     btnEdit.Enabled = false;
@@ -57,7 +49,7 @@ namespace DAMP_Forms.Common
                     btnClose.Enabled = true;
                 }
 
-                if (FormMode.View == frmMode)
+                if (IEnums.FormMode.View == frmMode)
                 {
                     btnNew.Enabled = true;
                     btnEdit.Enabled = true;
@@ -66,9 +58,8 @@ namespace DAMP_Forms.Common
                     btnSave.Enabled = false;
                     btnClose.Enabled = true;
                 }
-                    
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

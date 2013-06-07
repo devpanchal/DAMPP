@@ -53,10 +53,10 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlMsg = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
             this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
+            this.pnlMsg = new System.Windows.Forms.Panel();
+            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -369,6 +369,27 @@
             this.panel2.Size = new System.Drawing.Size(1256, 35);
             this.panel2.TabIndex = 2;
             // 
+            // cntrlButtonBar1
+            // 
+            this.cntrlButtonBar1.BackColor = System.Drawing.Color.White;
+            this.cntrlButtonBar1.Location = new System.Drawing.Point(6, 4);
+            this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.cntrlButtonBar1.Name = "cntrlButtonBar1";
+            this.cntrlButtonBar1.PageName = "PageName";
+            this.cntrlButtonBar1.Size = new System.Drawing.Size(1245, 30);
+            this.cntrlButtonBar1.TabIndex = 0;
+            this.cntrlButtonBar1.VisibleCloseBtn = true;
+            this.cntrlButtonBar1.VisibleDeleteBtn = true;
+            this.cntrlButtonBar1.VisibleEditBtn = true;
+            this.cntrlButtonBar1.VisibleListBtn = false;
+            this.cntrlButtonBar1.VisibleNewBtn = true;
+            this.cntrlButtonBar1.VisibleSaveBtn = true;
+            this.cntrlButtonBar1.btnCloseClick += new DAMP_Forms.Controls.cntrlButtonBar.btnCloseClickHandler(this.cntrlButtonBar1_btnCloseClick);
+            this.cntrlButtonBar1.btnSaveClick += new DAMP_Forms.Controls.cntrlButtonBar.btnSaveClickHandler(this.cntrlButtonBar1_btnSaveClick);
+            this.cntrlButtonBar1.btnEditClick += new DAMP_Forms.Controls.cntrlButtonBar.btnEditClickHandler(this.cntrlButtonBar2_btnEditClick);
+            this.cntrlButtonBar1.btnNewClick += new DAMP_Forms.Controls.cntrlButtonBar.btnNewClickHandler(this.cntrlButtonBar1_btnNewClick);
+            this.cntrlButtonBar1.btnDeleteClick += new DAMP_Forms.Controls.cntrlButtonBar.btnDeleteClickHandler(this.cntrlButtonBar1_btnDeleteClick);
+            // 
             // pnlMsg
             // 
             this.pnlMsg.Controls.Add(this.lblErrMsg);
@@ -377,6 +398,14 @@
             this.pnlMsg.Name = "pnlMsg";
             this.pnlMsg.Size = new System.Drawing.Size(1256, 34);
             this.pnlMsg.TabIndex = 4;
+            // 
+            // lblErrMsg
+            // 
+            this.lblErrMsg.Location = new System.Drawing.Point(41, 6);
+            this.lblErrMsg.Margin = new System.Windows.Forms.Padding(0);
+            this.lblErrMsg.Name = "lblErrMsg";
+            this.lblErrMsg.Size = new System.Drawing.Size(1169, 22);
+            this.lblErrMsg.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
@@ -393,31 +422,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(626, 51);
             this.tableLayoutPanel3.TabIndex = 5;
-            // 
-            // lblErrMsg
-            // 
-            this.lblErrMsg.Location = new System.Drawing.Point(41, 6);
-            this.lblErrMsg.Margin = new System.Windows.Forms.Padding(0);
-            this.lblErrMsg.Name = "lblErrMsg";
-            this.lblErrMsg.Size = new System.Drawing.Size(1169, 22);
-            this.lblErrMsg.TabIndex = 0;
-            // 
-            // cntrlButtonBar1
-            // 
-            this.cntrlButtonBar1.BackColor = System.Drawing.Color.White;
-            this.cntrlButtonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cntrlButtonBar1.Location = new System.Drawing.Point(0, 0);
-            this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
-            this.cntrlButtonBar1.Name = "cntrlButtonBar1";
-            this.cntrlButtonBar1.PageName = "PageName";
-            this.cntrlButtonBar1.Size = new System.Drawing.Size(1256, 35);
-            this.cntrlButtonBar1.TabIndex = 0;
-            this.cntrlButtonBar1.VisibleCloseBtn = true;
-            this.cntrlButtonBar1.VisibleDeleteBtn = true;
-            this.cntrlButtonBar1.VisibleEditBtn = true;
-            this.cntrlButtonBar1.VisibleListBtn = true;
-            this.cntrlButtonBar1.VisibleNewBtn = true;
-            this.cntrlButtonBar1.VisibleSaveBtn = true;
             // 
             // cntrlRegistration
             // 

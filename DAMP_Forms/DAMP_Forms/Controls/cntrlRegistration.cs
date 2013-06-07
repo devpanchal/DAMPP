@@ -16,16 +16,16 @@ namespace DAMP_Forms
 
         #region "Variables"
 
-        FormMode frmMode;
+        IEnums.FormMode frmMode;
         private bLogin objbLogin = new bLogin();
 
-        enum FormMode
-        {
-            None,
-            Add,
-            Edit,
-            View
-        }
+        //enum FormMode
+        //{
+        //    None,
+        //    Add,
+        //    Edit,
+        //    View
+        //}
 
         #endregion
 
@@ -42,7 +42,7 @@ namespace DAMP_Forms
             {
                 FillGrid();
                 FillInitalizedata();
-                frmMode = FormMode.View;
+                frmMode = IEnums.FormMode.View;
                 EDState(frmMode);
                 txtUserID.Text = DAMPGlobalVar.LoginUserID;
                 txtUserID_Leave(null, null);
@@ -262,26 +262,31 @@ namespace DAMP_Forms
             con.Enabled = EnblDsblFlag;
         }
 
-        private void EDState(FormMode frmMode)
+        private void EDState(IEnums.FormMode frmMode)
         {
             try
             {
-                if (FormMode.None == frmMode)
+                //bCommon objbCommon = new bCommon();
+                //objbCommon.ShowButton(cntrlButtonBar1, frmMode);
+
+                bCommon.ShowButton(cntrlButtonBar1, frmMode);
+
+                if (IEnums.FormMode.None == frmMode)
                 {
                     EnblDsblControls(tableLayoutPanel1, false);
                     EnblDsblControls(tableLayoutPanel3, false);
                 }
-                else if (FormMode.View == frmMode)
+                else if (IEnums.FormMode.View == frmMode)
                 {
                     EnblDsblControls(tableLayoutPanel1, false);
                     EnblDsblControls(tableLayoutPanel3, true);
                 }
-                else if (FormMode.Edit == frmMode)
+                else if (IEnums.FormMode.Edit == frmMode)
                 {
                     EnblDsblControls(tableLayoutPanel1, true);
                     EnblDsblControls(tableLayoutPanel3, false);
                 }
-                else if (FormMode.Add == frmMode)
+                else if (IEnums.FormMode.Add == frmMode)
                 {
                     EnblDsblControls(tableLayoutPanel1, true);
                     EnblDsblControls(tableLayoutPanel3, true);
@@ -310,15 +315,15 @@ namespace DAMP_Forms
 
                         ClearFormDetail();
                         FillFormDetail();
-                        frmMode = FormMode.View;
+                        frmMode = IEnums.FormMode.View;
                         EDState(frmMode);
                     }
                     else
                     {
-                        if (frmMode != FormMode.Add)
+                        if (frmMode != IEnums.FormMode.Add)
                         {
                             ClearFormDetail();
-                            frmMode = FormMode.View;
+                            frmMode = IEnums.FormMode.View;
                             EDState(frmMode);
                             lblErrMsg.ShowErrorMsg("User ID is not exiest");
                         }
@@ -326,10 +331,13 @@ namespace DAMP_Forms
                 }
                 else
                 {
-                    ClearFormDetail();
-                    txtUserID.Focus();
-                    frmMode = FormMode.View;
-                    EDState(frmMode);
+                    if (frmMode != IEnums.FormMode.Add)
+                    {
+                        ClearFormDetail();
+                        txtUserID.Focus();
+                        frmMode = IEnums.FormMode.View;
+                        EDState(frmMode);
+                    }
                 }
             }
             catch (Exception ex)
@@ -366,7 +374,7 @@ namespace DAMP_Forms
                 SetData();
                 objbLogin.SaveData();
                 FillGrid();
-                frmMode = FormMode.View;
+                frmMode = IEnums.FormMode.View;
                 EDState(frmMode);
                 lblErrMsg.ShowMsg(DAMPGlobalVar.SaveSuccessFully);
             }
@@ -384,7 +392,7 @@ namespace DAMP_Forms
                 objbLogin.GetData();
                 ClearFormDetail();
                 txtUserID.Focus();
-                frmMode = FormMode.Add;
+                frmMode = IEnums.FormMode.Add;
                 EDState(frmMode);
             }
             catch (Exception ex)
@@ -406,7 +414,7 @@ namespace DAMP_Forms
                     objbLogin.SaveData();
                     ClearFormDetail();
                     FillGrid();
-                    frmMode = FormMode.View;
+                    frmMode = IEnums.FormMode.View;
                     EDState(frmMode);
                     lblErrMsg.ShowMsg(DAMPGlobalVar.DeleteSuccessFully);
                 }
@@ -441,13 +449,13 @@ namespace DAMP_Forms
 
                         ClearFormDetail();
                         FillFormDetail();
-                        frmMode = FormMode.View;
+                        frmMode = IEnums.FormMode.Edit;
                         EDState(frmMode);
                     }
                     else
                     {
                         ClearFormDetail();
-                        frmMode = FormMode.View;
+                        frmMode = IEnums.FormMode.View;
                         EDState(frmMode);
                         lblErrMsg.ShowErrorMsg("User ID is not exiest");
                     }
@@ -456,7 +464,7 @@ namespace DAMP_Forms
                 {
                     ClearFormDetail();
                     txtUserID.Focus();
-                    frmMode = FormMode.View;
+                    frmMode = IEnums.FormMode.View;
                     EDState(frmMode);
                 }
             }
