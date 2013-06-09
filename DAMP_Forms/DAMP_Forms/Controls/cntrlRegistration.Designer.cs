@@ -53,9 +53,9 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
+            this.cntrlButtonBar1 = new DAMP_Forms.cntrlButtonBar();
             this.pnlMsg = new System.Windows.Forms.Panel();
-            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
+            this.lblErrMsg = new DAMP_Forms.cntrlErrMessage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -385,11 +385,11 @@
             this.cntrlButtonBar1.VisibleListBtn = false;
             this.cntrlButtonBar1.VisibleNewBtn = true;
             this.cntrlButtonBar1.VisibleSaveBtn = true;
-            this.cntrlButtonBar1.btnCloseClick += new DAMP_Forms.Controls.cntrlButtonBar.btnCloseClickHandler(this.cntrlButtonBar1_btnCloseClick);
-            this.cntrlButtonBar1.btnSaveClick += new DAMP_Forms.Controls.cntrlButtonBar.btnSaveClickHandler(this.cntrlButtonBar1_btnSaveClick);
-            this.cntrlButtonBar1.btnEditClick += new DAMP_Forms.Controls.cntrlButtonBar.btnEditClickHandler(this.cntrlButtonBar2_btnEditClick);
-            this.cntrlButtonBar1.btnNewClick += new DAMP_Forms.Controls.cntrlButtonBar.btnNewClickHandler(this.cntrlButtonBar1_btnNewClick);
-            this.cntrlButtonBar1.btnDeleteClick += new DAMP_Forms.Controls.cntrlButtonBar.btnDeleteClickHandler(this.cntrlButtonBar1_btnDeleteClick);
+            this.cntrlButtonBar1.btnCloseClick += new DAMP_Forms.cntrlButtonBar.btnCloseClickHandler(this.cntrlButtonBar1_btnCloseClick);
+            this.cntrlButtonBar1.btnSaveClick += new DAMP_Forms.cntrlButtonBar.btnSaveClickHandler(this.cntrlButtonBar1_btnSaveClick);
+            this.cntrlButtonBar1.btnEditClick += new DAMP_Forms.cntrlButtonBar.btnEditClickHandler(this.cntrlButtonBar2_btnEditClick);
+            this.cntrlButtonBar1.btnNewClick += new DAMP_Forms.cntrlButtonBar.btnNewClickHandler(this.cntrlButtonBar1_btnNewClick);
+            this.cntrlButtonBar1.btnDeleteClick += new DAMP_Forms.cntrlButtonBar.btnDeleteClickHandler(this.cntrlButtonBar1_btnDeleteClick);
             // 
             // pnlMsg
             // 
@@ -480,7 +480,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.Label lblContactNo;
-        private Controls.cntrlErrMessage lblErrMsg;
-        private Controls.cntrlButtonBar cntrlButtonBar1;
+        private cntrlErrMessage lblErrMsg;
+        private cntrlButtonBar cntrlButtonBar1;
     }
 }

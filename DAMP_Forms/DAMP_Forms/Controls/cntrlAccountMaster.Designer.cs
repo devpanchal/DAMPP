@@ -1,4 +1,4 @@
-﻿namespace DAMP_Forms.Controls
+﻿namespace DAMP_Forms
 {
     partial class cntrlAccountMaster
     {
@@ -29,27 +29,31 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
+            this.cntrlButtonBar1 = new DAMP_Forms.cntrlButtonBar();
             this.pnlMsg = new System.Windows.Forms.Panel();
-            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
+            this.lblErrMsg = new DAMP_Forms.cntrlErrMessage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblUserDetails = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtAccNo = new System.Windows.Forms.TextBox();
-            this.lblAccNo = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCSTNo = new System.Windows.Forms.TextBox();
+            this.lblReatilTax = new System.Windows.Forms.Label();
+            this.lblCSTDate = new System.Windows.Forms.Label();
+            this.lblTinDate = new System.Windows.Forms.Label();
+            this.lblCSTNo = new System.Windows.Forms.Label();
+            this.dtpTinDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpCSTDate = new System.Windows.Forms.DateTimePicker();
+            this.cboRetailTax = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtTinNo = new System.Windows.Forms.TextBox();
+            this.lblTinNo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtAccName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
-            this.txtPhoneR = new System.Windows.Forms.TextBox();
             this.lblPhoneR = new System.Windows.Forms.Label();
             this.lblPhoneO = new System.Windows.Forms.Label();
             this.lblCountry = new System.Windows.Forms.Label();
@@ -57,31 +61,27 @@
             this.lblCity = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblAccName = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTinNo = new System.Windows.Forms.TextBox();
-            this.lblTinNo = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtCSTNo = new System.Windows.Forms.TextBox();
-            this.lblReatilTax = new System.Windows.Forms.Label();
-            this.lblCSTDate = new System.Windows.Forms.Label();
-            this.lblTinDate = new System.Windows.Forms.Label();
-            this.lblCSTNo = new System.Windows.Forms.Label();
             this.txtCountry = new System.Windows.Forms.TextBox();
+            this.txtPhoneR = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dtpTinDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpCSTDate = new System.Windows.Forms.DateTimePicker();
-            this.cboRetailTax = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtAccNo = new System.Windows.Forms.TextBox();
+            this.lblAccNo = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.pnlMsg.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -101,7 +101,8 @@
             this.cntrlButtonBar1.Location = new System.Drawing.Point(0, 0);
             this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
             this.cntrlButtonBar1.Name = "cntrlButtonBar1";
-            this.cntrlButtonBar1.PageName = "PageName";
+            this.cntrlButtonBar1.PageName = "Account Master Page";
+            this.cntrlButtonBar1.SetPageTitle = "Account Master Page";
             this.cntrlButtonBar1.Size = new System.Drawing.Size(1256, 35);
             this.cntrlButtonBar1.TabIndex = 0;
             this.cntrlButtonBar1.VisibleCloseBtn = true;
@@ -176,42 +177,6 @@
             this.panel3.Size = new System.Drawing.Size(1250, 428);
             this.panel3.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.user_id,
-            this.name,
-            this.gender});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1250, 150);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // user_id
-            // 
-            this.user_id.DataPropertyName = "user_id";
-            this.user_id.HeaderText = "User ID";
-            this.user_id.Name = "user_id";
-            this.user_id.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel5);
@@ -222,257 +187,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1243, 423);
             this.panel4.TabIndex = 3;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.5F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.5F));
-            this.tableLayoutPanel3.Controls.Add(this.txtAccNo, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lblAccNo, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(626, 51);
-            this.tableLayoutPanel3.TabIndex = 6;
-            // 
-            // txtAccNo
-            // 
-            this.txtAccNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAccNo.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtAccNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAccNo.Location = new System.Drawing.Point(223, 15);
-            this.txtAccNo.MaxLength = 10;
-            this.txtAccNo.Name = "txtAccNo";
-            this.txtAccNo.Size = new System.Drawing.Size(189, 20);
-            this.txtAccNo.TabIndex = 1;
-            // 
-            // lblAccNo
-            // 
-            this.lblAccNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAccNo.AutoSize = true;
-            this.lblAccNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAccNo.Location = new System.Drawing.Point(70, 17);
-            this.lblAccNo.Name = "lblAccNo";
-            this.lblAccNo.Size = new System.Drawing.Size(106, 17);
-            this.lblAccNo.TabIndex = 0;
-            this.lblAccNo.Text = "Account Number";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.50424F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.49576F));
-            this.tableLayoutPanel1.Controls.Add(this.txtAccName, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtCity, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtState, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblPhoneR, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.lblPhoneO, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.lblCountry, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.lblState, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblCity, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblAddress, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblAccName, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtCountry, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtPhoneR, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 2, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 53);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(626, 386);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // txtAccName
-            // 
-            this.txtAccName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAccName.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtAccName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAccName.Location = new System.Drawing.Point(223, 17);
-            this.txtAccName.MaxLength = 50;
-            this.txtAccName.Name = "txtAccName";
-            this.txtAccName.Size = new System.Drawing.Size(366, 20);
-            this.txtAccName.TabIndex = 11;
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddress.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.Location = new System.Drawing.Point(223, 58);
-            this.txtAddress.MaxLength = 250;
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(266, 49);
-            this.txtAddress.TabIndex = 12;
-            this.txtAddress.UseSystemPasswordChar = true;
-            // 
-            // txtCity
-            // 
-            this.txtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCity.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCity.Location = new System.Drawing.Point(223, 127);
-            this.txtCity.MaxLength = 30;
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(292, 20);
-            this.txtCity.TabIndex = 13;
-            this.txtCity.UseSystemPasswordChar = true;
-            // 
-            // txtState
-            // 
-            this.txtState.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtState.Location = new System.Drawing.Point(223, 182);
-            this.txtState.MaxLength = 30;
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(266, 20);
-            this.txtState.TabIndex = 14;
-            // 
-            // txtPhoneR
-            // 
-            this.txtPhoneR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPhoneR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhoneR.Location = new System.Drawing.Point(223, 348);
-            this.txtPhoneR.MaxLength = 13;
-            this.txtPhoneR.Name = "txtPhoneR";
-            this.txtPhoneR.Size = new System.Drawing.Size(155, 20);
-            this.txtPhoneR.TabIndex = 17;
-            // 
-            // lblPhoneR
-            // 
-            this.lblPhoneR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPhoneR.AutoSize = true;
-            this.lblPhoneR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPhoneR.Location = new System.Drawing.Point(70, 349);
-            this.lblPhoneR.Name = "lblPhoneR";
-            this.lblPhoneR.Size = new System.Drawing.Size(107, 17);
-            this.lblPhoneR.TabIndex = 10;
-            this.lblPhoneR.Text = "Phone Residence";
-            // 
-            // lblPhoneO
-            // 
-            this.lblPhoneO.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblPhoneO.AutoSize = true;
-            this.lblPhoneO.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPhoneO.Location = new System.Drawing.Point(70, 294);
-            this.lblPhoneO.Name = "lblPhoneO";
-            this.lblPhoneO.Size = new System.Drawing.Size(82, 17);
-            this.lblPhoneO.TabIndex = 3;
-            this.lblPhoneO.Text = "Phone Office";
-            // 
-            // lblCountry
-            // 
-            this.lblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCountry.AutoSize = true;
-            this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCountry.Location = new System.Drawing.Point(70, 239);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(53, 17);
-            this.lblCountry.TabIndex = 7;
-            this.lblCountry.Text = "Country";
-            // 
-            // lblState
-            // 
-            this.lblState.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblState.AutoSize = true;
-            this.lblState.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblState.Location = new System.Drawing.Point(70, 184);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(37, 17);
-            this.lblState.TabIndex = 5;
-            this.lblState.Text = "State";
-            // 
-            // lblCity
-            // 
-            this.lblCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCity.AutoSize = true;
-            this.lblCity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCity.Location = new System.Drawing.Point(70, 129);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(29, 17);
-            this.lblCity.TabIndex = 6;
-            this.lblCity.Text = "City";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAddress.Location = new System.Drawing.Point(70, 74);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(56, 17);
-            this.lblAddress.TabIndex = 4;
-            this.lblAddress.Text = "Address";
-            // 
-            // lblAccName
-            // 
-            this.lblAccName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAccName.AutoSize = true;
-            this.lblAccName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAccName.Location = new System.Drawing.Point(70, 19);
-            this.lblAccName.Name = "lblAccName";
-            this.lblAccName.Size = new System.Drawing.Size(93, 17);
-            this.lblAccName.TabIndex = 2;
-            this.lblAccName.Text = "Account Name";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.5F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.5F));
-            this.tableLayoutPanel4.Controls.Add(this.txtTinNo, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.lblTinNo, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(626, 1);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(617, 51);
-            this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // txtTinNo
-            // 
-            this.txtTinNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTinNo.BackColor = System.Drawing.Color.LemonChiffon;
-            this.txtTinNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTinNo.Location = new System.Drawing.Point(221, 15);
-            this.txtTinNo.MaxLength = 20;
-            this.txtTinNo.Name = "txtTinNo";
-            this.txtTinNo.Size = new System.Drawing.Size(231, 20);
-            this.txtTinNo.TabIndex = 1;
-            // 
-            // lblTinNo
-            // 
-            this.lblTinNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTinNo.AutoSize = true;
-            this.lblTinNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTinNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTinNo.Location = new System.Drawing.Point(70, 17);
-            this.lblTinNo.Name = "lblTinNo";
-            this.lblTinNo.Size = new System.Drawing.Size(77, 17);
-            this.lblTinNo.TabIndex = 0;
-            this.lblTinNo.Text = "Tin Number";
             // 
             // tableLayoutPanel5
             // 
@@ -560,26 +274,6 @@
             this.lblCSTNo.TabIndex = 2;
             this.lblCSTNo.Text = "CST Number";
             // 
-            // txtCountry
-            // 
-            this.txtCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCountry.Location = new System.Drawing.Point(223, 237);
-            this.txtCountry.MaxLength = 30;
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(266, 20);
-            this.txtCountry.TabIndex = 20;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(223, 292);
-            this.textBox7.MaxLength = 13;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(155, 20);
-            this.textBox7.TabIndex = 21;
-            // 
             // dtpTinDate
             // 
             this.dtpTinDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -615,6 +309,313 @@
             this.cboRetailTax.Size = new System.Drawing.Size(42, 21);
             this.cboRetailTax.TabIndex = 22;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.5F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.5F));
+            this.tableLayoutPanel4.Controls.Add(this.txtTinNo, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblTinNo, 1, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(626, 1);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(617, 51);
+            this.tableLayoutPanel4.TabIndex = 8;
+            // 
+            // txtTinNo
+            // 
+            this.txtTinNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtTinNo.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtTinNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTinNo.Location = new System.Drawing.Point(221, 15);
+            this.txtTinNo.MaxLength = 20;
+            this.txtTinNo.Name = "txtTinNo";
+            this.txtTinNo.Size = new System.Drawing.Size(231, 20);
+            this.txtTinNo.TabIndex = 1;
+            // 
+            // lblTinNo
+            // 
+            this.lblTinNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTinNo.AutoSize = true;
+            this.lblTinNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTinNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTinNo.Location = new System.Drawing.Point(70, 17);
+            this.lblTinNo.Name = "lblTinNo";
+            this.lblTinNo.Size = new System.Drawing.Size(77, 17);
+            this.lblTinNo.TabIndex = 0;
+            this.lblTinNo.Text = "Tin Number";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.50424F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.49576F));
+            this.tableLayoutPanel1.Controls.Add(this.txtAccName, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtAddress, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtCity, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtState, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblPhoneR, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lblPhoneO, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.lblCountry, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.lblState, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblCity, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblAddress, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblAccName, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtCountry, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtPhoneR, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBox7, 2, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 53);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(626, 386);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // txtAccName
+            // 
+            this.txtAccName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAccName.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtAccName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAccName.Location = new System.Drawing.Point(223, 17);
+            this.txtAccName.MaxLength = 50;
+            this.txtAccName.Name = "txtAccName";
+            this.txtAccName.Size = new System.Drawing.Size(366, 20);
+            this.txtAccName.TabIndex = 11;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddress.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddress.Location = new System.Drawing.Point(223, 58);
+            this.txtAddress.MaxLength = 250;
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(266, 49);
+            this.txtAddress.TabIndex = 12;
+            this.txtAddress.UseSystemPasswordChar = true;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCity.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCity.Location = new System.Drawing.Point(223, 127);
+            this.txtCity.MaxLength = 30;
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(292, 20);
+            this.txtCity.TabIndex = 13;
+            this.txtCity.UseSystemPasswordChar = true;
+            // 
+            // txtState
+            // 
+            this.txtState.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtState.Location = new System.Drawing.Point(223, 182);
+            this.txtState.MaxLength = 30;
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(266, 20);
+            this.txtState.TabIndex = 14;
+            // 
+            // lblPhoneR
+            // 
+            this.lblPhoneR.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblPhoneR.AutoSize = true;
+            this.lblPhoneR.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneR.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPhoneR.Location = new System.Drawing.Point(70, 349);
+            this.lblPhoneR.Name = "lblPhoneR";
+            this.lblPhoneR.Size = new System.Drawing.Size(107, 17);
+            this.lblPhoneR.TabIndex = 10;
+            this.lblPhoneR.Text = "Phone Residence";
+            // 
+            // lblPhoneO
+            // 
+            this.lblPhoneO.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblPhoneO.AutoSize = true;
+            this.lblPhoneO.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPhoneO.Location = new System.Drawing.Point(70, 294);
+            this.lblPhoneO.Name = "lblPhoneO";
+            this.lblPhoneO.Size = new System.Drawing.Size(82, 17);
+            this.lblPhoneO.TabIndex = 3;
+            this.lblPhoneO.Text = "Phone Office";
+            // 
+            // lblCountry
+            // 
+            this.lblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblCountry.AutoSize = true;
+            this.lblCountry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCountry.Location = new System.Drawing.Point(70, 239);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(53, 17);
+            this.lblCountry.TabIndex = 7;
+            this.lblCountry.Text = "Country";
+            // 
+            // lblState
+            // 
+            this.lblState.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblState.AutoSize = true;
+            this.lblState.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblState.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblState.Location = new System.Drawing.Point(70, 184);
+            this.lblState.Name = "lblState";
+            this.lblState.Size = new System.Drawing.Size(37, 17);
+            this.lblState.TabIndex = 5;
+            this.lblState.Text = "State";
+            // 
+            // lblCity
+            // 
+            this.lblCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblCity.AutoSize = true;
+            this.lblCity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCity.Location = new System.Drawing.Point(70, 129);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(29, 17);
+            this.lblCity.TabIndex = 6;
+            this.lblCity.Text = "City";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAddress.Location = new System.Drawing.Point(70, 74);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(56, 17);
+            this.lblAddress.TabIndex = 4;
+            this.lblAddress.Text = "Address";
+            // 
+            // lblAccName
+            // 
+            this.lblAccName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAccName.AutoSize = true;
+            this.lblAccName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAccName.Location = new System.Drawing.Point(70, 19);
+            this.lblAccName.Name = "lblAccName";
+            this.lblAccName.Size = new System.Drawing.Size(93, 17);
+            this.lblAccName.TabIndex = 2;
+            this.lblAccName.Text = "Account Name";
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCountry.Location = new System.Drawing.Point(223, 237);
+            this.txtCountry.MaxLength = 30;
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(266, 20);
+            this.txtCountry.TabIndex = 20;
+            // 
+            // txtPhoneR
+            // 
+            this.txtPhoneR.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtPhoneR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhoneR.Location = new System.Drawing.Point(223, 348);
+            this.txtPhoneR.MaxLength = 13;
+            this.txtPhoneR.Name = "txtPhoneR";
+            this.txtPhoneR.Size = new System.Drawing.Size(155, 20);
+            this.txtPhoneR.TabIndex = 17;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Location = new System.Drawing.Point(223, 292);
+            this.textBox7.MaxLength = 13;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(155, 20);
+            this.textBox7.TabIndex = 21;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.5F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.5F));
+            this.tableLayoutPanel3.Controls.Add(this.txtAccNo, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lblAccNo, 1, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(626, 51);
+            this.tableLayoutPanel3.TabIndex = 6;
+            // 
+            // txtAccNo
+            // 
+            this.txtAccNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAccNo.BackColor = System.Drawing.Color.LemonChiffon;
+            this.txtAccNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAccNo.Location = new System.Drawing.Point(223, 15);
+            this.txtAccNo.MaxLength = 10;
+            this.txtAccNo.Name = "txtAccNo";
+            this.txtAccNo.Size = new System.Drawing.Size(189, 20);
+            this.txtAccNo.TabIndex = 1;
+            // 
+            // lblAccNo
+            // 
+            this.lblAccNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAccNo.AutoSize = true;
+            this.lblAccNo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAccNo.Location = new System.Drawing.Point(70, 17);
+            this.lblAccNo.Name = "lblAccNo";
+            this.lblAccNo.Size = new System.Drawing.Size(106, 17);
+            this.lblAccNo.TabIndex = 0;
+            this.lblAccNo.Text = "Account Number";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.user_id,
+            this.name,
+            this.gender});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(1250, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // user_id
+            // 
+            this.user_id.DataPropertyName = "user_id";
+            this.user_id.HeaderText = "User ID";
+            this.user_id.Name = "user_id";
+            this.user_id.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            // 
             // cntrlAccountMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,16 +632,16 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

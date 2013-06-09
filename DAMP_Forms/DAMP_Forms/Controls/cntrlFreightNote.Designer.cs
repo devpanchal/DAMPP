@@ -1,4 +1,4 @@
-﻿namespace DAMP_Forms.Controls
+﻿namespace DAMP_Forms
 {
     partial class cntrlFreightNote
     {
@@ -44,11 +44,11 @@
             this.txtFreightDesc = new System.Windows.Forms.TextBox();
             this.dtpFreightdate = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
+            this.cntrlButtonBar1 = new DAMP_Forms.cntrlButtonBar();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMsg = new System.Windows.Forms.Panel();
-            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
+            this.lblErrMsg = new DAMP_Forms.cntrlErrMessage();
             this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtRefNo = new System.Windows.Forms.TextBox();
@@ -280,7 +280,8 @@
             this.cntrlButtonBar1.Location = new System.Drawing.Point(0, 0);
             this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
             this.cntrlButtonBar1.Name = "cntrlButtonBar1";
-            this.cntrlButtonBar1.PageName = "PageName";
+            this.cntrlButtonBar1.PageName = "Freight Note Page";
+            this.cntrlButtonBar1.SetPageTitle = "Freight Note Page";
             this.cntrlButtonBar1.Size = new System.Drawing.Size(1256, 35);
             this.cntrlButtonBar1.TabIndex = 0;
             this.cntrlButtonBar1.VisibleCloseBtn = true;

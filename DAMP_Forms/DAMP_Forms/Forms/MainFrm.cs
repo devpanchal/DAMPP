@@ -32,8 +32,10 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                //lblPageName.Text = accountMasterToolStripMenuItem.Text;
+
+                cntrlAccountMaster objAccountMaster = new cntrlAccountMaster();
                 pnlDetails.Controls.Clear();
+                pnlDetails.Controls.Add(objAccountMaster);
             }
             catch (Exception ex)
             {
@@ -67,8 +69,9 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                //lblPageName.Text = itemMasterToolStripMenuItem.Text;
+                cntrlItemMaster objItemMaster = new cntrlItemMaster();
                 pnlDetails.Controls.Clear();
+                pnlDetails.Controls.Add(objItemMaster);
             }
             catch (Exception ex)
             {
@@ -118,8 +121,9 @@ namespace DAMP_Forms.Forms
         {
             try
             {
-                //lblPageName.Text = freightNoteToolStripMenuItem.Text;
+                cntrlFreightNote objFreightNote = new cntrlFreightNote();
                 pnlDetails.Controls.Clear();
+                pnlDetails.Controls.Add(objFreightNote);
             }
             catch (Exception ex)
             {

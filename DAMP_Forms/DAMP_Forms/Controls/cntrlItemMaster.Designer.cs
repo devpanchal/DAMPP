@@ -1,4 +1,4 @@
-﻿namespace DAMP_Forms.Controls
+﻿namespace DAMP_Forms
 {
     partial class cntrlItemMaster
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cntrlButtonBar1 = new DAMP_Forms.Controls.cntrlButtonBar();
+            this.cntrlButtonBar1 = new DAMP_Forms.cntrlButtonBar();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.txtItemDesc = new System.Windows.Forms.TextBox();
@@ -36,7 +36,7 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMsg = new System.Windows.Forms.Panel();
-            this.lblErrMsg = new DAMP_Forms.Controls.cntrlErrMessage();
+            this.lblErrMsg = new DAMP_Forms.cntrlErrMessage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblUserDetails = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -63,7 +63,8 @@
             this.cntrlButtonBar1.Location = new System.Drawing.Point(0, 0);
             this.cntrlButtonBar1.Margin = new System.Windows.Forms.Padding(0);
             this.cntrlButtonBar1.Name = "cntrlButtonBar1";
-            this.cntrlButtonBar1.PageName = "PageName";
+            this.cntrlButtonBar1.PageName = "Item Master Page";
+            this.cntrlButtonBar1.SetPageTitle = "Item Master Page";
             this.cntrlButtonBar1.Size = new System.Drawing.Size(1256, 35);
             this.cntrlButtonBar1.TabIndex = 0;
             this.cntrlButtonBar1.VisibleCloseBtn = true;

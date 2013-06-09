@@ -69,6 +69,18 @@
     <Compile Include="Controls\cntrlErrMessage.Designer.cs">
       <DependentUpon>cntrlErrMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\cntrlFreightNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cntrlFreightNote.Designer.cs">
+      <DependentUpon>cntrlFreightNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\cntrlItemMaster.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\cntrlItemMaster.Designer.cs">
+      <DependentUpon>cntrlItemMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\cntrlRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\cntrlErrMessage.resx">
       <DependentUpon>cntrlErrMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cntrlFreightNote.resx">
+      <DependentUpon>cntrlFreightNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\cntrlItemMaster.resx">
+      <DependentUpon>cntrlItemMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\cntrlRegistration.resx">
       <DependentUpon>cntrlRegistration.cs</DependentUpon>

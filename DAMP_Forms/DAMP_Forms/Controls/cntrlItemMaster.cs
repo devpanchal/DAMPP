@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace DAMP_Forms.Controls
+namespace DAMP_Forms
 {
     public partial class cntrlItemMaster : UserControl
     {

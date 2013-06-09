@@ -1,4 +1,4 @@
-﻿namespace DAMP_Forms.Controls
+﻿namespace DAMP_Forms
 {
     partial class cntrlErrMessage
     {
